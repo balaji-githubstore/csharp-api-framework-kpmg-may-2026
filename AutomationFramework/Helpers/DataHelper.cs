@@ -48,12 +48,31 @@ namespace AutomationFramework.Helpers
         public static object[] AddPetTestSource()
         {
             object[] data1 = new object[2];
-            data1[0] = "";
+            data1[0] = @"{
+              ""id"": 856,
+              ""name"": ""string"",
+              ""category"": {
+                ""id"": 0,
+                ""name"": ""string""
+              },
+              ""tags"": [
+                {
+                  ""id"": 0,
+                  ""name"": ""string""
+                }
+              ],
+              ""status"": ""available""
+            }";
+
             data1[1] = HttpStatusCode.OK;
 
             object[] data2 = new object[2];
-            data2[0] = "";
-            data2[1] = HttpStatusCode.NotFound;
+            data2[0] = @"{
+              ""id"": 855,
+              ""name"": ""string"",
+              ""status"": ""available""
+            }";
+            data2[1] = HttpStatusCode.OK;
 
             object[] main = new object[2];
             main[0] = data1;

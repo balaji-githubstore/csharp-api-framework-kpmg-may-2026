@@ -26,6 +26,9 @@ namespace AutomationFramework.Tests
             var service = new PetService();
             var response = service.AddPetService(jsonStrBody);
             Assert.That(response.StatusCode, Is.EqualTo(statusCode));
+
+            //deserialize jsonStrBody to PetRequest Object
+            //deserialize response to PetResponse Object
         }
     }
 }
