@@ -32,7 +32,6 @@
     <Folder Include="Model\" />
     <Folder Include="Tests\" />
     <Folder Include="Schemas\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
