@@ -18,6 +18,5 @@ namespace AutomationFramework.Base
         {
             return client.Execute(request);
         }
-       
     }
 }
