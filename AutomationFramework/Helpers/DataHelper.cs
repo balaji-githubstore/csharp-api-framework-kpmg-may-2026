@@ -1,30 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace AutomationFramework.Helpers
 {
     public class DataHelper
     {
-        public static object[] DemoData()
+        public static object[] GetPetTestSource()
         {
             object[] data1 = new object[2];
-            data1[0] = "saul";
-            data1[1] = 787887;
+            data1[0] = 705;
+            data1[1] = HttpStatusCode.OK;
+
             object[] data2 = new object[2];
-            data2[0] = "peter";
-            data2[1] = 45455;
+            data2[0] = 888;
+            data2[1] = HttpStatusCode.NotFound;
+
+            object[] data3 = new object[2];
+            data3[0] = 999;
+            data3[1] = HttpStatusCode.NotFound;
+
+            //number of testcases
+            object[] main = new object[3];
+            main[0] = data1;
+            main[1] = data2;
+            main[2] = data3;
+
+            return main;
+        }
+        //string jsonStrBody = @"{
+        //      ""id"": 705,
+        //      ""name"": ""string"",
+        //      ""category"": {
+        //        ""id"": 0,
+        //        ""name"": ""string""
+        //      },
+        //      ""tags"": [
+        //        {
+        //          ""id"": 0,
+        //          ""name"": ""string""
+        //        }
+        //      ],
+        //      ""status"": ""available""
+        //    }";
+
+        public static object[] AddPetTestSource()
+        {
+            object[] data1 = new object[2];
+            data1[0] = "";
+            data1[1] = HttpStatusCode.OK;
+
+            object[] data2 = new object[2];
+            data2[0] = "";
+            data2[1] = HttpStatusCode.NotFound;
 
             object[] main = new object[2];
             main[0] = data1;
             main[1] = data2;
+
             return main;
         }
-        [Test,TestCaseSource(nameof(DemoData))]
-        public void DemoTest(string name,int password)
-        {
-            Console.WriteLine(name+password);
-        }
-
     }
 }
