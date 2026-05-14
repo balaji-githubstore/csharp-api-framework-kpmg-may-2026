@@ -88,6 +88,12 @@ namespace AutomationFramework.Helpers
             return main;
         }
 
+        public static object[] AddPetTestSourceFromExcel()
+        {
+            object[] main = ExcelHelper.GetObjectArrayFromSheet(@"testdata\petdata.xlsx", "addPet");
+            return main;
+        }
+
         public static object[] UpdatePetTestSourceFromJson()
         {
             object[] main = JsonHelper.GetObjectArrayFromJson(@"testdata\petdata.json", "updatePet");

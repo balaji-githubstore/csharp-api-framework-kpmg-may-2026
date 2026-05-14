@@ -37,7 +37,7 @@ namespace AutomationFramework.Model
             public List<string> PhotoUrls { get; set; }
             public List<Tag> Tags { get; set; }
 
-            [JsonProperty(Required = Required.Always)]
+            //[JsonProperty(Required = Required.Always)]
             public string Status { get; set; }
         }
     }
