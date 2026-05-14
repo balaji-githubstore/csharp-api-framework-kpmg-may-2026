@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Securiton.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
@@ -77,6 +78,13 @@ namespace AutomationFramework.Helpers
             object[] main = new object[2];
             main[0] = data1;
             main[1] = data2;
+
+            return main;
+        }
+
+        public static object[] AddPetTestSource1()
+        {
+            object[] main = JsonUtils.GetJsonIntoObjectArray(@"testdata\data.json", "addPet");
 
             return main;
         }

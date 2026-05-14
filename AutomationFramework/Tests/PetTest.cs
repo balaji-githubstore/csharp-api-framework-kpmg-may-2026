@@ -20,7 +20,7 @@ namespace AutomationFramework.Tests
         }
 
 
-        [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.AddPetTestSource))]
+        [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.AddPetTestSource1))]
         public void AddPetTest(string jsonStrBody,HttpStatusCode statusCode)
         {
             var service = new PetService();

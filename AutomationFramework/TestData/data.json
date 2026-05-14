@@ -1,0 +1,40 @@
+﻿{
+  "addPet": [
+    [
+      {
+        "id": 705,
+        "name": "string",
+        "category": {
+          "id": 0,
+          "name": "string"
+        },
+        "tags": [
+          {
+            "id": 0,
+            "name": "string"
+          }
+        ],
+        "status": "available"
+      },
+      200
+    ],
+    [
+      {
+        "id": 708,
+        "name": "string",
+        "category": {
+          "id": 0,
+          "name": "string"
+        },
+        "tags": [
+          {
+            "id": 0,
+            "name": "string"
+          }
+        ],
+        "status": "available"
+      },
+      200
+    ]
+  ]
+}
