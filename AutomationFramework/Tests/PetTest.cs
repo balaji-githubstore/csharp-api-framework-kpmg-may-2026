@@ -20,11 +20,11 @@ namespace AutomationFramework.Tests
         }
 
 
-        [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.AddPetTestSource))]
-        public void AddPetTest(string jsonStrBody,HttpStatusCode statusCode)
+        [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.AddPetTestSourceFromJson))]
+        public void AddPetTest(string requestBody,HttpStatusCode statusCode)
         {
             var service = new PetService();
-            var response = service.AddPetService(jsonStrBody);
+            var response = service.AddPetService(requestBody);
             Assert.That(response.StatusCode, Is.EqualTo(statusCode));
 
             //deserialize jsonStrBody to PetRequest Object

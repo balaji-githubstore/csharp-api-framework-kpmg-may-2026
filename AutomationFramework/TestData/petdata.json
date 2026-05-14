@@ -1,0 +1,28 @@
+{
+  "addPet": [
+    [
+      {
+        "id": 905,
+        "name": "dog-905"
+      },
+      200
+    ],
+    [
+      {
+        "id": 906,
+        "name": "dog-906",
+        "status": "sold"
+      },
+      200
+    ],
+    [
+      {
+        "id": 907,
+        "name": "dog-906",
+        "status": "sold"
+      },
+      200
+    ]
+  ],
+  "updatePet": []
+}

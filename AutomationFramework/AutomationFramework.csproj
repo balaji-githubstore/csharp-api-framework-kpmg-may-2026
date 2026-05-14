@@ -32,4 +32,10 @@
     <Folder Include="Schemas\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TestData\petdata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
