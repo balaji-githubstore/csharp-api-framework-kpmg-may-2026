@@ -29,6 +29,7 @@ namespace AutomationFramework.Helpers
                 for (int j = 0; j < json[key][i].Count; j++)
                 {
                     data[j] = Convert.ToString(json[key][i][j]);
+                    Console.WriteLine(Convert.ToString(json[key][i][j]));
                 }
                 main[i] = data;
             }

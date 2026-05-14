@@ -87,5 +87,11 @@ namespace AutomationFramework.Helpers
             object[] main = JsonHelper.GetObjectArrayFromJson(@"testdata\petdata.json", "addPet");
             return main;
         }
+
+        public static object[] UpdatePetTestSourceFromJson()
+        {
+            object[] main = JsonHelper.GetObjectArrayFromJson(@"testdata\petdata.json", "updatePet");
+            return main;
+        }
     }
 }

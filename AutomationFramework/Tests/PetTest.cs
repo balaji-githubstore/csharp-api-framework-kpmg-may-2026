@@ -12,23 +12,31 @@ namespace AutomationFramework.Tests
         //[TestCase(705,HttpStatusCode.OK)]
         //[TestCase(705787878, HttpStatusCode.NotFound)]
         [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.GetPetTestSource))]
-        public void GetPetTest(long id,HttpStatusCode statusCode)
+        public void GetPetTest(long id, HttpStatusCode statusCode)
         {
             var service = new PetService();
-            var response= service.GetPetByIdService(id);
+            var response = service.GetPetByIdService(id);
             Assert.That(response.StatusCode, Is.EqualTo(statusCode));
         }
 
 
         [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.AddPetTestSourceFromJson))]
-        public void AddPetTest(string requestBody,HttpStatusCode statusCode)
+        public void AddPetTest(string requestBody, HttpStatusCode statusCode)
         {
+
             var service = new PetService();
             var response = service.AddPetService(requestBody);
             Assert.That(response.StatusCode, Is.EqualTo(statusCode));
 
             //deserialize jsonStrBody to PetRequest Object
             //deserialize response to PetResponse Object
+        }
+
+        [Test, TestCaseSource(typeof(DataHelper), nameof(DataHelper.UpdatePetTestSourceFromJson))]
+        public void UpdatePetTest(string requestBody, HttpStatusCode statusCode)
+        {
+            Console.WriteLine(requestBody);
+            Console.WriteLine(statusCode);
         }
     }
 }
