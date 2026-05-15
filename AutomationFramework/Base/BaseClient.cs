@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using AutomationFramework.Helpers;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,7 +12,12 @@ namespace AutomationFramework.Base
 
         public BaseClient()
         {
-            client = new RestClient(baseUrl: "https://petstore.swagger.io/v2");
+            var options = new RestClientOptions(ConfigurationHelper.GetBaseUrl())
+            {
+                Timeout = TimeSpan.FromSeconds(ConfigurationHelper.GetTimeout())
+            };
+            client = new RestClient(options);
+            //client = new RestClient(baseUrl: "https://petstore.swagger.io/v2");
         }
 
         protected RestResponse Execute(RestRequest request)
